@@ -20,5 +20,9 @@ $(call inherit-product-if-exists, vendor/htc/m7spr/m7spr-vendor.mk)
 # overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/m7spr/overlay
 
+# OTA ID
+PRODUCT_PROPERTY_OVERRIDES += \
+    otaupdater.otaid=liquidm7spr
+
 # Inherit from m7-common
 $(call inherit-product, device/htc/m7-common/m7-common.mk)
