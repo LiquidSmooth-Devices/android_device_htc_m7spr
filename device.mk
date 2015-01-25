@@ -24,5 +24,12 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/m7spr/overlay
 PRODUCT_PROPERTY_OVERRIDES += \
     otaupdater.otaid=liquidm7spr
 
+# FM radio
+PRODUCT_PACKAGES += \
+    FM2 \
+    FMRecord \
+    libqcomfm_jni \
+    qcom.fmradio
+
 # Inherit from m7-common
 $(call inherit-product, device/htc/m7-common/m7-common.mk)
