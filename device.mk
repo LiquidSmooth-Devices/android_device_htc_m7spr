@@ -17,12 +17,21 @@
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/m7spr/m7spr-vendor.mk)
 
-# overlays
-DEVICE_PACKAGE_OVERLAYS += device/htc/m7spr/overlay
+# local overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+<<<<<<< HEAD
 # OTA ID
 PRODUCT_PROPERTY_OVERRIDES += \
     otaupdater.otaid=liquidm7spr
+=======
+# FM radio
+PRODUCT_PACKAGES += \
+    FM2 \
+    FMRecord \
+    libqcomfm_jni \
+    qcom.fmradio
+>>>>>>> 8bcc31d8faacaa958d3a350b1e334022728766db
 
 # Inherit from m7-common
 $(call inherit-product, device/htc/m7-common/m7-common.mk)
